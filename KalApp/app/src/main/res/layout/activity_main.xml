@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:xlns="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimage">
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@drawable/Logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily=""
+        android:gravity="center"
+        android:text="Iniciar \nsesión"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/loginhelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Inicia sesión para continuar"
+        android:layout_below="@id/login"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="5dp"
+    />
+
+    <TextView
+        android:id="@+id/emaillabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CORREO"
+        android:layout_below="@id/loginhelp"
+        android:layout_marginTop="1dp"
+        android:layout_marginHorizontal="38dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:layout_below="@id/emaillabel"
+        android:hint="CorreoEjemplo@gmail.com"
+        android:textColorHint="#904D4C4C"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="38dp"
+        android:padding="20dp"
+        android:background="#50E8F5E9"
+        />
+
+    <TextView
+        android:id="@+id/passwordlabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONTRASEÑA"
+        android:layout_below="@id/email"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="38dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_below="@id/passwordlabel"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="38dp"
+        android:padding="20dp"
+        android:background="#50E8F5E9"
+        />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_below="@id/password"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="38dp"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/white"
+    />
+
+    <TextView
+        android:id="@+id/signuplink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:gravity="center"
+        android:layout_below="@id/loginbutton"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="38dp"
+        android:textColor="#994A90E2"
+        />
+
+</RelativeLayout>
+
+

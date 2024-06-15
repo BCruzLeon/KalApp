@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-public class LoginActivity extends Activity {
+public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +16,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // Iniciar RegisterActivity
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         }
@@ -25,11 +25,10 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // Iniciar MenuActivity
-                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         }
-
         );
     }
 }

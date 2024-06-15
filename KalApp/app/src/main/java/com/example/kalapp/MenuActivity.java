@@ -3,25 +3,24 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-public class RegisterActivity extends Activity {
+public class MenuActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-        TextView registerHelp = findViewById(R.id.registerhelp);
+        setContentView(R.layout.activity_menu);
+        LinearLayout logOut = findViewById(R.id.logoutbutton);
         // Enlaza con activity_menu.xml
-        registerHelp.setOnClickListener(new View.OnClickListener() {
+        logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Iniciar MainActivity
-                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                Intent intent = new Intent(MenuActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         }
         );
-        // Enlaza con activity_register.xml
     }
 }

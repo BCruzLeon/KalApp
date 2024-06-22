@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "136227319858",
+    "project_id": "kalapp-16a94",
+    "storage_bucket": "kalapp-16a94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136227319858:android:6cf77a4ddd5934fbe24c2b",
+        "android_client_info": {
+          "package_name": "com.example.kalapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD6Ebp-O126hLHIm2KtDFCpbgBAS9K7Nk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

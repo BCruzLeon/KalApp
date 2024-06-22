@@ -1,47 +1,75 @@
 package com.example.kalapp
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.kalapp.ui.theme.KalAppTheme
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var email: EditText
+    private lateinit var password: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            KalAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                            name = "Android",
-                            modifier = Modifier.padding(innerPadding)
-                    )
-                }
+        setContentView(R.layout.activity_main)
+
+        email = findViewById(R.id.emailEditText)
+        password = findViewById(R.id.passwordEditText)
+        val signUpLink: TextView = findViewById(R.id.signuplink)
+
+        signUpLink.setOnClickListener {
+            // Iniciar RegisterActivity
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
+        setup()
+    }
+
+    private fun setup() {
+        title = "Login"
+        val loginButton: Button = findViewById(R.id.loginbutton)
+
+        loginButton.setOnClickListener {
+            if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
+                FirebaseAuth.getInstance()
+                    .signInWithEmailAndPassword(email.text.toString(),
+                        password.text.toString()).addOnCompleteListener{
+                            if (it.isSuccessful) {
+                                showMenu(it.result?.user?.email ?: "", ProviderType.BASIC)
+                            } else {
+                                this.showAlert()
+                            }
+                    }
             }
+
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
+    private fun showAlert() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("Usuario no registrado, por favor registrese para continuar")
+        builder.setPositiveButton("Aceptar", null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    KalAppTheme {
-        Greeting("Android")
+    private fun showMenu(email: String, provider: ProviderType) {
+        val menuIntent = Intent(this, MenuActivity::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider.name)
+        }
+        startActivity(menuIntent)
     }
 }
+
+
+
+

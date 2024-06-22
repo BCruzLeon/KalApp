@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainMenuActivity">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,15 +25,15 @@
                 android:src="@drawable/profile_image"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/circle"
-                android:contentDescription="@string/profile_image" />
+                android:layout_marginEnd="16dp"/>
+                <!--android:background="@drawable/circle" -->
+                <!--android:contentDescription="@string/profile_image"-->
 
             <TextView
                 android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Brayan \nCruz"
+                android:text="Nombre"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -137,8 +136,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:src="@drawable/calculate_calories"
-                        android:VerticalGravity="center"
-                        android:centerVertical="true"
                         android:layout_gravity="center" />
 
 
@@ -159,10 +156,11 @@
                     >
 
                     <TextView
+                        android:id="@+id/userWeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="70"
+                        android:text="PESO"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
@@ -196,10 +194,11 @@
                     android:layout_marginLeft="27dp">
 
                     <TextView
+                        android:id="@+id/userHeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="1.70"
+                        android:text="ALT"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
@@ -210,7 +209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="m"
+                        android:text="cm"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
@@ -282,8 +281,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:src="@drawable/bmi_icon"
-                        android:VerticalGravity="center"
-                        android:centerVertical="true"
                         android:layout_gravity="center" />
 
                 </LinearLayout>
@@ -306,7 +303,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:text="1700"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"
                         android:layout_centerHorizontal="true"
@@ -342,7 +339,6 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:src="@drawable/update_data_icon"
-                        android:layout_centerVertical="true"
                         android:layout_height="50dp"
                         android:layout_gravity="center_vertical" />
 
@@ -426,7 +422,6 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/suggestedDietLabel"
                 android:rowCount="1"
                 android:columnCount="2">
 
@@ -499,8 +494,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:src="@drawable/nav_icon_profile"
-                    android:VerticalGravity="center"
-                    android:centerVertical="true"
                     android:layout_gravity="center" />
 
                 <TextView
@@ -530,8 +523,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:src="@drawable/nav_icon_calculator"
-                    android:VerticalGravity="center"
-                    android:centerVertical="true"
                     android:layout_gravity="center"
                     />
 
@@ -562,8 +553,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:src="@drawable/nav_icon_home"
-                    android:VerticalGravity="center"
-                    android:centerVertical="true"
                     android:layout_gravity="center" />
 
                 <TextView
@@ -594,8 +583,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:src="@drawable/nav_icon_diet"
-                    android:VerticalGravity="center"
-                    android:centerVertical="true"
                     android:layout_gravity="center"
                     />
 
@@ -614,6 +601,7 @@
 
             <!-- Height -->
             <LinearLayout
+                android:id="@+id/logoutbutton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -627,8 +615,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
                     android:src="@drawable/nav_icon_logout"
-                    android:VerticalGravity="center"
-                    android:centerVertical="true"
                     android:layout_gravity="center" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -645,4 +631,4 @@
         </GridLayout>
 
     </LinearLayout>
-</RelativeLayout>
+</ScrollView>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#9dc236"/> <!-- Fondo del EditText -->
-    <corners
-        android:topRightRadius="70dp"
-        android:topLeftRadius="0dp"
-        android:bottomRightRadius="0dp"
-        android:bottomLeftRadius="0dp"/> <!-- Radios individuales de las esquinas -->
-</shape>

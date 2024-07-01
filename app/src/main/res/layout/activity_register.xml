@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/emailR"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/myImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.85"
+            android:background="@drawable/roundedright_green"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Crear una cuenta"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/registerhelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="¿Ya tienes una cuenta? Inicia sesión aquí"
+                    android:textColor="#994A90E2" />
+
+                <TextView
+                    android:id="@+id/namelabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/nombre" />
+
+                <EditText
+                    android:id="@+id/nameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="Nombre Completo"
+                    android:inputType="text"
+                    android:padding="13dp"
+                    android:textColorHint="#904D4C4C"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/emaillabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="8dp"
+                    android:text="CORREO" />
+
+                <EditText
+                    android:id="@+id/emailRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="CorreoEjemplo@gmail.com"
+                    android:inputType="textEmailAddress"
+                    android:padding="13dp"
+                    android:textColorHint="#904D4C4C"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/passwordlabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="8dp"
+                    android:text="CONTRASEÑA" />
+
+                <EditText
+                    android:id="@+id/passwordRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:inputType="textPassword"
+                    android:hint="Contraseña"
+                    android:textColorHint="#904D4C4C"
+                    android:padding="13dp"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/pesolabel"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="PESO" />
+
+                    <TextView
+                        android:id="@+id/alturalabel"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="ALTURA" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/weightRegister"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:hint="Peso (kg)"
+                        android:inputType="number"
+                        android:padding="13dp"
+                        android:textColorHint="#904D4C4C"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/heightRegister"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:hint="Altura (cm)"
+                        android:inputType="number"
+                        android:padding="13dp"
+                        android:textColorHint="#904D4C4C"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/doblabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="8dp"
+                    android:text="FECHA DE NACIMIENTO" />
+
+                <EditText
+                    android:id="@+id/dobRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="Seleccionar Fecha"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:padding="13dp"
+                    android:textColorHint="#904D4C4C"
+                    android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="35dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/genderlabel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="GÉNERO" />
+
+                <TextView
+                    android:id="@+id/diseaselabel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="ENFERMEDADES" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <Spinner
+                    android:id="@+id/genderRegister"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="13dp"
+                    android:textColorHint="#904D4C4C"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/diseaseRegister"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="13dp"
+                    android:textColorHint="#904D4C4C"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+                <Button
+                    android:id="@+id/registerbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="Registrarse"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

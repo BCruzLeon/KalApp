@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KalApp</string>
+    <string name="nombre">NOMBRE</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+        <string-array name="gender_array">
+            <item>Hombre</item>
+            <item>Mujer</item>
+        </string-array>
+
+        <string-array name="disease_array">
+            <item>Ninguna</item>
+            <item>Hipertensión</item>
+            <item>Diabetes</item>
+        </string-array>
+</resources>
